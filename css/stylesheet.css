@@ -52,6 +52,14 @@ table {
 body {
 	font-family: 'merriweather', sans-serif;
 	-webkit-font-smoothing: antialiased;
+
+}
+
+h3 {
+	font-family: 'robato', sans-serif;
+	font-size: 1.5em;
+	font-weight: 150;
+	text-align: center;
 }
 
 /* Header Section*/
@@ -60,6 +68,7 @@ body {
 	height: 3em;
 	background-color: #000;
 }
+
 .masthead h3 {
 	font-family: lato;
 	font-size: 1em;
@@ -71,7 +80,7 @@ body {
 /* Main Title Section*/
 
 .title {
-		margin: 4em 13em 3em 3em;
+		margin: 4em 13em auto;
 		}
 
 .title .content {
@@ -83,7 +92,7 @@ body {
 	font-size: 5.5em;
 	font-weight: 100;
 	margin: 0 0;
-	padding-top: 1.4em;	
+	padding-top: 0.8em;	
 	}
 .title h2 {
 	font-family: 'robato';
@@ -105,19 +114,56 @@ body {
 	margin: 0 1em 3em 0;
 	padding: 10px;
 	border-radius: 50%;
-	border: solid 1px lightgray;
+	border: solid 1px;
 }
 
 /*About Me Section*/
 
 .about hr {
 	border: 0;
-	border-top: 1px solid lightgray;
+	border-top: 1px solid;
 	margin: 2.6em 5em;
 }
 
 .about .content {
+	margin: 2em 12em;
+}
+.about h4 {
+	font-family: 'robato';
+	font-size: 1.4em;
+	text-align: center;
+	margin-top: 1em;
+}
+
+
+/*Projects section*/
+
+.projects hr { 
+	border: 0;
+	border-top: 1px solid;
+	margin: 2.6em 5em;	
+}
+.projects .content {
 	margin: 2em 5em;
+	padding: 1em 3em;
+}
+
+.projects .images {
+	max-width: 680px;
+	margin: 2em auto;
+}
+
+.projects .images li {
+	display: inline-block;
+	margin-right: 2.35em;
+}
+.projects .images img {
+	border-radius: 20px;
+}
+
+.projects .images figcaption {
+	text-align: center;
+	margin-top: 10px;
 }
 
 /*Animation Test*/
