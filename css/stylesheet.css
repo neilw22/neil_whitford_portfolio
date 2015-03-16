@@ -88,20 +88,30 @@ a {
 
 /* Main Title Section*/
 
+/*
 .title {
-		margin: 4em 13em auto;
+		margin: 4em 13em 0 0;
 		}
+*/
 
+.title { 
+	height: 31em;
+	margin: 4em 0 auto;
+	}
 .title .content {
 	-webkit-animation: fadein 3s;
+	margin: 0 3em;
+	}	
+.title .content-text {
+	display: inline-block;
+	position: relative;
+	bottom: 10em;
 	}
-
 .title h1 {
 	font-family: 'lato';
-	font-size: 5.5em;
+	font-size: 5em;
 	font-weight: 100;
 	margin: 0 0;
-	padding-top: 0.8em;	
 	}
 .title h2 {
 	font-family: 'robato';
@@ -111,11 +121,12 @@ a {
 	-webkit-animation: fadein 4s;
 	}
 .title img{
-	width: 50%;
+	height: 75%;
+	display: inline-block;
 	min-width: 2em;
-	float: left;
+	min-height: 3em;
 	border-radius: 15px;
-	margin: 2.3em 2em;
+	margin: 2.5em 2em 2em 2em;
 	}
 .title .social li {
 	width: 1em;
@@ -130,20 +141,19 @@ a {
 
 /*About Me Section*/
 
+.about .content {
+	width: 80%;
+	margin: auto;
+	}
 .about hr {
 	border: 0;
 	border-top: 1px solid;
-	margin: 2.6em 5em;
-}
-
-.about .content {
-	margin: 2em 12em;
-}
+	/*margin: 1em 5em;*/
+	}
 .about h4 {
 	font-family: 'robato';
 	font-size: 1.4em;
 	text-align: center;
-	margin-top: 1em;
 }
 
 .about .button {
@@ -155,7 +165,7 @@ a {
 .projects hr { 
 	border: 0;
 	border-top: 1px solid;
-	margin: 2.6em 5em;	
+	margin: 1em 5em;	
 }
 .projects .content {
 	margin: 2em 5em;
@@ -163,19 +173,36 @@ a {
 }
 
 .projects .images {
-	max-width: 680px;
-	margin: 2em auto;
+	width: 60%;
+	margin: 1em auto;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
 }
 
+.projects .flex-item {
+	margin: 2em;
+}
+
+/*.projects .content .project-windows {
+	display: flex;
+	background-color: lightgrey;
+	width: 49%;
+	margin: 1em auto;
+}
+*/
 .projects .images li {
-	display: inline-block;
-	margin-right: 2.35em;
+	/*display: inline-block;*/
+	/*margin-right: 2.35em;*/
 }
 .projects .images img {
+	width: 15em;
 	border-radius: 20px;
 }
 
 .projects .images figcaption {
+	font-family: 'merriweather';
+	font-size: .8em;
 	text-align: center;
 	margin-top: 10px;
 }
@@ -189,13 +216,67 @@ button {
 
 /*Responsive Design*/
 
-/*Animation Test*/
-h6 {
-	-webkit-animation: fadein 2s;
+@media only screen and (max-width: 1185px) {
+	.title .content{
+		/*height: 50%;*/
+		/*width: 60%;*/
+		/*margin: 0 auto;*/
+		/*text-align: center;*/
+	}
+	.title .content-text {
+		position: relative;
+		/*top: 0.4em;*/
+	}
+	.title h1 {
+		font-size: 3em;
+	}
+	.title h2 {
+		font-size: 1.7em;
+	}
+	.title .content img {
+		height: 20em;
+		margin: auto;
+	}
+
+@media only screen and (max-width: 660px) {
+	.title .content{
+		height: 50%;
+		width: 60%;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.title .content-text {
+		position: static;
+		margin: 1em auto;
+	}
+	.title h1 {
+		font-size: 3.5em;
+	}
+	.title h2 {
+		font-size: 2.1em;
+	}
+	.title .content img {
+		height: 20em;
+		margin: auto;
+	}
+
+@media only screen and (max-width: 1090px) {
+	.projects .images {
+		flex-direction: column;
+	}
 }
 
+@media only screen and (max-width: 560px) {
+	.title h1 {
+		font-size: 3em;
+	}
+	.title h2 {
+		font-size: 1.85em;
+	}
+}
+
+/* Animation */
 @-webkit-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
-/*Animation Test
