@@ -100,13 +100,16 @@ a:hover {
 */
 
 .title { 
-	height: 31em;
+	/*height: 30em;*/
 	margin: 4em 0 auto;
 	}
 .title .content {
 	-webkit-animation: fadein 3s;
+	-moz-animation: fadein 3s;
+	-o-animation: fadein 3s;
+	animation: fadein 3s;
 	margin: 0 3em;
-	}	
+	}
 .title .content-text {
 	display: inline-block;
 	position: relative;
@@ -125,7 +128,7 @@ a:hover {
 	font-weight: 100;
 	margin: 13px 0;
 	text-shadow: 1px 1px 1px #818886;
-	-webkit-animation: fadein 4s;
+	/*-webkit-animation: fadein 4s;*/
 	}
 .title img{
 	height: 75%;
@@ -139,13 +142,26 @@ a:hover {
 .title .social li {
 	width: 1em;
 	height: 1em;
-	color: rgb(22, 73, 40);
+	/*color: rgb(22, 73, 40);*/
 	display: inline-block;
 	margin: 0 1em 3em 0;
 	padding: 10px;
 	border-radius: 10px;
 	border: solid 1px black;
 	box-shadow: 1px 1px 1px #5C6E60;
+}
+
+#facebook {
+	color: #3b5998;
+}
+#twitter {
+	color: #00aced;
+}
+#google {
+	color: #dd4b39;
+}
+#linkedin {
+	color: #007bb6;
 }
 
 /*About Me Section*/
@@ -256,31 +272,63 @@ button {
 	color: white;
 }
 
+
+/* Animation */
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
 /*Responsive Design*/
+
+@media only screen and (min-width: 1185px) {
+	.title .content {
+		height: 30em;
+	}
+}
 
 @media only screen and (max-width: 1185px) {
 	.title .content{
-		/*height: 50%;*/
-		/*width: 60%;*/
-		/*margin: 0 auto;*/
+		/*height: auto;*/
+		width: 46em;
+		margin: auto;
 		/*text-align: center;*/
 	}
 	.title .content-text {
 		position: relative;
-		/*top: 0.4em;*/
+		bottom: 7em;
+		margin-left: 1em;
 	}
 	.title h1 {
-		font-size: 3em;
+		font-size: 3.2em;
 	}
 	.title h2 {
-		font-size: 1.7em;
+		font-size: 1.9em;
 	}
 	.title .content img {
 		height: 20em;
 		margin: auto;
 	}
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 840px) {
+	.projects .images {
+		width: 39%;
+		flex-direction: column;
+	}
+}
+
+@media only screen and (max-width: 760px) {
 	.title .content{
 		height: 50%;
 		width: 60%;
@@ -302,12 +350,6 @@ button {
 		margin: auto;
 	}
 
-@media only screen and (max-width: 1090px) {
-	.projects .images {
-		flex-direction: column;
-	}
-}
-
 @media only screen and (max-width: 560px) {
 	.title h1 {
 		font-size: 3em;
@@ -317,8 +359,4 @@ button {
 	}
 }
 
-/* Animation */
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
+
